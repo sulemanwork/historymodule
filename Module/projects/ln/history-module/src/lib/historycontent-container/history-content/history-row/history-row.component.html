@@ -1,0 +1,52 @@
+<div class="wrapper results_text_medium">
+   <ol>
+       <!-- class="{{alert.selected}}" -->
+
+       <li *ngFor="let history of history, let i = index ">
+           <label>
+               <span class="snoHistoryList">{{ i + 1 }}.</span>
+           </label>
+           <span>&nbsp;</span>
+
+           <div>
+               <div class="resultsborder">
+                   <h2 class="doc-title caution">
+                       <a href="#" class="rowclick">
+                           {{ history.label }}
+                       </a>
+                   </h2>
+
+                   <div class="">
+                       <div class="metadata">
+                           <div class="rowaside">
+                               <ul class>
+                                   <li>Lexis+™</li>
+                                   <li>{{history.client}}</li>
+                                   <li>-{{history.term}}-</li>
+                                   <li>
+                                    {{history.createdDate | date:'long'}}
+                                   </li>
+                                 </ul>
+                           </div>
+                       </div>
+                       <div class="item">
+                        <article>
+                          <ul class="displayItem">
+                            <li class="headings">Content Type:</li>
+                            <li> {{ history.contentType }} </li>
+                            <li class="headings">Terms:</li>
+                            <li> {{ history.term }}</li>
+                            <li class="headings">Narrowed By:</li>
+                            <li class="headings"> Content Type: </li>
+                            <li>Jurisdiction: {{ history.frequency }}</li>
+                            <li class="headings">Practice Areas and Topics:</li>
+                            <li> {{ history.practiceAreasTopics }}</li>
+                          </ul>
+                        </article>
+                      </div>
+                   </div>
+               </div>
+           </div>
+       </li>
+   </ol>
+</div>

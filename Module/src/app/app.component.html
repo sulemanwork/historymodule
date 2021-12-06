@@ -1,0 +1,41 @@
+<history-container>
+  <p>heading area</p> 
+
+  <historycontent-container>
+    <div class="wrapper panel pagewrapper bg-light">
+      <div class="master-detail">
+        <div class="master-pane">
+          <div class="search-controls filter_text_medium">
+            <p>sidebar</p>
+          </div>
+        </div>
+        <div class="detail-pane">
+          <history-content>
+            <div class="resultListheader">
+              <h2>
+                  List ({{ history.length }})
+              </h2>
+              <span class="listMapWrapper">
+                  <button class="listRMactive icon la-Full">
+                      <span role="tooltip" class="tooltip">List</span>
+                  </button>
+                  <button class="listRMclickable icon la-Graphical" data-action="researchmap">
+                      <span role="tooltip" class="tooltip">Research Map</span>
+                  </button>
+              </span>
+            </div>
+          
+            <history-toolbar (sortByValues)="sortByValues($event)"></history-toolbar>
+
+
+            <history-row [history]="history"></history-row>
+            <pagination></pagination>
+
+          </history-content>
+        </div>
+      </div>
+    </div>
+  </historycontent-container>
+
+</history-container>
+<router-outlet></router-outlet>

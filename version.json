@@ -1,0 +1,15 @@
+{
+  "version": "1.0", // required (unless the "inherit" field is set to true and a parent version.json file sets this.)
+  "buildNumberOffset": "0", // optional. Use when you need to add/subtract a fixed value from the computed build number.
+  "publicReleaseRefSpec": [
+    "^refs/heads/master$", // we release out of master
+    "^refs/heads/release/", // we also release out of release branches
+    "^refs/tags/v\\d+\\.\\d+" // we also release tags starting with vN.N
+  ],
+  "cloudBuild": {
+    "buildNumber": {
+      "enabled": true,
+    }
+  },
+  "inherit": false // optional. Set to true in secondary version.json files used to tweak settings for subsets of projects.
+}

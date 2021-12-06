@@ -1,0 +1,65 @@
+
+            <div class="toolbar-gvs" role="toolbar">
+                <div >
+                    <ul>
+                        <li class="selected hidden" data-menu="viewtray" data-role="count">
+                            <div class="dropdown">
+                                <span class="mobileWhiteRectangle"></span>
+                                <button class="has_tooltip" type="button" >
+                                    <span class="select"></span>
+                                    <span class="select more"> SELECTED</span>
+                                    <span class="icon la-TriangleDown"></span>
+                                    <span role="tooltip" class="tooltip">View Tray</span>
+                                </button>
+                                <div class="dropdown-menu noscroll noWidth" id="viewtray-dropdown" >
+                                    <div class="tray">
+                                        <div class="dropdown-header">
+                                            <span class="selecteditems" id="selecteditemsID">Selected Items</span>
+            
+                                            <div class="groupall">
+                                                <button class="button secondary" data-action="cancel">Clear All</button>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-items">
+                                            <ul></ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+            
+                        <li>
+                            <button class="has_tooltip" data-action="print" aria-label="Printer-friendly view">
+                                <span class="icon la-PrintablePage"></span>
+                                <span class="tooltip">Printer-friendly view</span>
+                            </button>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="rightAlign" data-menu="sortby">
+                            <span id="toolbar.sortby.label" class="rightPadding hideInMobile">Sort by: </span>
+                            <div class="dropdown " [class.active]="check">
+                                <button (click)="addActive()" class="dropdown-toggle fixedWidth" >
+                                    <span id="sortbymenulabel" class="selected">{{ selectValue }}</span>
+                                    <span class="icon la-TriangleDown"></span>
+                                    <span class="icon la-SortBy"></span>
+                                </button>
+                                <span class="mobileWhiteRectangle"></span>
+                                <div id="dropdownmenu" class="dropdown-menu noscroll noWidth rightAligned">
+                                    <button type="button" (click)="sortData('dateNew','Date Saved (Newest)')" >Date Saved (Newest)</button>
+                                    <button type="button" (click)="sortData('dateOld','Date Saved (Oldest)')">Date Saved (Oldest)</button>
+                                    <button type="button" (click)="sortData('titleNew','Title (A-Z)')">Title (A-Z)</button>
+                                    <button type="button" (click)="sortData('titleOld','Title (Z-A)')">Title (Z-A)</button>
+                                    <button type="button" (click)="sortData('typeNew','Type (A-Z)')">Type (A-Z)</button>
+                                    <button type="button" (click)="sortData('typeOld','Type (Z-A)')">Type (Z-A)</button>
+                                    <button type="button" (click)="sortData('clientNew','Client (A - Z)')">Client (A - Z)</button>
+                                    <button type="button" (click)="sortData('clientOld','Client (Z-A)')">Client (Z-A)</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+  
+  

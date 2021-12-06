@@ -1,0 +1,19 @@
+{
+  "name": "@ln/history-abstractions",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@ln/radix-abstractions": "^2.0.0"
+  },
+  "files": [
+    "**/*.js",
+    "**/*.d.ts"
+  ],
+  "devDependencies": {
+    "@types/chai": "4.1.7"
+  }
+}

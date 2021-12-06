@@ -1,0 +1,22 @@
+# Repo: Apps.Radix.Peer/FeaturePeer.PeerProjectName
+# File: azure-pipelines.yml
+
+resources: 
+  repositories: 
+    - repository: templates
+      name: Apps.Radix.Build/AzureDevopsPipelines
+      type: git
+
+trigger:
+-   feature
+
+pr:
+-   feature
+
+jobs: 
+- template: /templates/core-client-build-ng12.yml@templates
+  parameters:
+    HasAbstractions: true
+    HasBusiness: false
+    HasModule: false
+    name: 'history'
