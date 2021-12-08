@@ -33,6 +33,15 @@ export class AppComponent {
       client:"Litigation Analytics Search"
     }
   ]
+  add(arg1 = 1, arg2 = 2) {
+    if (1) {
+      var result;
+      result = arg1 + arg2;
+      return result;
+    } else {
+      return 2;
+    }
+  }
   sortByValues(sortby:any){
     if(sortby == "dateNew"){
       this.history = this.history.sort((a, b) => <any>new Date(b.createdDate) - <any>new Date(a.createdDate));

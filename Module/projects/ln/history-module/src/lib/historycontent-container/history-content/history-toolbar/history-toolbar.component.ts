@@ -16,10 +16,13 @@ export class HistoryToolbarComponent {
   addActive()
   {
     this.check = !this.check
+    // return this.check
+    return this.check
   }
   sortData(event:any,value:any){
     this.sortByValues.emit(event);
     this.selectValue = value
     this.check = false
+    return true
   }
 }

@@ -22,4 +22,9 @@ describe('HistoryRowComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
+//   it('should check function', () => {
+//     expect(component.sortData).toBeTrue();
+//   });
+
 });
